@@ -78,8 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\craig\Desktop\ARK-UWP-Source-main\libs;$(LibraryPath);$(DXSDK_DIR)Lib\x64</LibraryPath>
-    <IncludePath>$(IncludePath);$(IncludePath);$(DXSDK_DIR)Include;</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Users\craig\Desktop\ARK-UWP-Source-main\libs;$(LibraryPath);$(DXSDK_DIR)Lib\x64</LibraryPath>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include</IncludePath>
     <ExternalIncludePath>C:\Users\craig\Desktop\ARK-UWP-Source-main\AUWPMC;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -151,8 +151,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>d3dx11.lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -183,6 +182,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="d3dx11.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Hack.h" />
     <ClInclude Include="Hooking\D3D11Hooking.hpp" />
